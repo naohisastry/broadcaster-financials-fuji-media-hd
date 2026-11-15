@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [1.96] - 2026-11-15
+
+### Added
+- URLハッシュによるタブ・グラフ直接遷移機能を追加（#tab1, #tab1-trend, #tab2, #tab2-total, #tab2-cash, #tab3）。数字・グラフデータに変更なし。
+
 ## [1.95] - 2026-11-14
 
 ### Changed
