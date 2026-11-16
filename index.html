@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>フジ・メディアHD 事業別の収益とキャッシュフロー――実績と試算（2017〜2036年度） Ver 1.96</title>
+<title>フジ・メディアHD 事業別の収益とキャッシュフロー――実績と試算（2017〜2036年度） Ver 1.97</title>
 <meta name="description" content="フジ・メディアHDの事業別の売上・営業利益とキャッシュフローを、開示実績（2017〜2025年度）・会社予想（2026年度）・試算（2027〜2036年度）でつないで可視化。不動産事業を切り離したと仮定した場合の利益と現金の推移を、前提を選んで確かめられます。">
 <meta name="author" content="naohisastry">
 <link rel="canonical" href="https://naohisastry.github.io/broadcaster-financials-fuji-media-hd/">
@@ -28,6 +28,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=Zen+Kaku+Gothic+New:wght@500;700;900&display=swap">
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<script src="i18n_core_v1.1.js"></script>
+<script src="i18n_en_fuji_v1.0.js"></script>
+<script>
+// v1.97: 言語切り替えボタンの設置と英語化（ページの描画後）
+document.addEventListener("DOMContentLoaded", function(){ window.I18N_MOUNT_SWITCH(document.querySelector(".ver")); window.I18N_RUN(); });
+</script>
 <style>
 html,body{margin:0;background:#000000}
 .viz-root{color-scheme:dark;
@@ -143,6 +149,11 @@ footer.app-footer{border-top:1px solid var(--border);margin-top:8px;padding:20px
 
 /* v1.64：行間を全体で約1.05倍（既定の行間 normal≈1.2 → 1.26）、補足テキストを約50%に */
 .viz-root{line-height:1.26}
+/* v1.97：言語切り替え */
+.lang-switch{display:inline-flex;border:1px solid var(--border);border-radius:999px;overflow:hidden;margin-left:4px}
+.lang-switch button{background:transparent;color:var(--text-muted);border:0;border-radius:0;padding:1px 10px;font-size:11.5px;cursor:pointer}
+.lang-switch button+button{border-left:1px solid var(--border)}
+.lang-switch button.active{background:#1d3550;color:var(--text-primary);font-weight:700;cursor:default}
 .skhead b .hint{font-size:max(50%,10px);font-weight:400;color:var(--text-secondary);margin-left:4px;vertical-align:middle}
 </style>
 </head>
@@ -154,7 +165,7 @@ footer.app-footer{border-top:1px solid var(--border);margin-top:8px;padding:20px
       <h1>フジ・メディアHD　事業別の収益とキャッシュフロー<br><span style="font-size:.62em;font-weight:600">――実績と試算（2017〜2036年度）</span></h1>
       <p class="lead">フジ・メディアHDの事業別の売上・営業利益と、キャッシュフロー（現金の入りと出）を、開示された実績（2017〜2025年度）、会社予想（2026年度）、2027年度以降の試算でつないで見られるダッシュボードです。今回の試算では、不動産事業（都市開発・観光）をすべて切り離したと仮定しています。放送収入の減り方、新しい事業の伸び、売却で受け取る対価、配当をプルダウンで選ぶと、2036年度までの数字が変わります。会社の目標（2030年度にメディア・コンテンツの営業利益350億円）との差も確かめられます。2027年度以降は筆者の試算です。タブ①で事業構成と利益を、タブ②でお金の入りと出を、タブ③で前提と出典を確認できます。</p>
     </div>
-    <div class="ver"><span class="vtag">Ver 1.96</span><span>2026.11</span></div>
+    <div class="ver"><span class="vtag">Ver 1.97</span><span>2026.11</span></div>
   </div>
 </header>
 <div class="viz-root">
